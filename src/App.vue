@@ -4,7 +4,10 @@
         <div class="sl-container">
             <div class="sl-content">
                 <h1 class="sl-title">VueJS Spinner Component</h1>
-
+                <div class="sl-socials">
+                    <iframe src="http://ghbtns.com/github-btn.html?user=sergeyloysha&repo=vue-spinner-component&type=watch&count=true"
+                            allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+                </div>
                 <div class="sl-preview">
                     <div class="sl-preview__spinner">
                         <spinner :status="spinnerStatus" :color="spinnerColor" :size="spinnerSize" :depth="spinnerDepth" :clockwise="spinnerClockwise" :duration="spinnerDuration"></spinner>
@@ -14,33 +17,33 @@
                 <div class="sl-controls">
 
                     <div class="sl-controls__item">
-                        <label for="size">Spinner Status</label>
-                        <button v-model="spinnerStatus" @click="spinnerStatus = !spinnerStatus">{{ statusMessage }}</button>
+                        <label for="size">Status</label>
+                        <button class="sl-controls__item-ctrl" v-model="spinnerStatus" @click="spinnerStatus = !spinnerStatus">{{ statusMessage }}</button>
                     </div>
 
                     <div class="sl-controls__item">
-                        <label for="size">Spinner Size</label>
-                        <input type="range" min="30" max="150" step="5" v-model="spinnerSize" id="size">
+                        <label for="size">Size</label>
+                        <input class="sl-controls__item-ctrl" type="range" min="30" max="150" step="5" v-model="spinnerSize" id="size">
                     </div>
 
                     <div class="sl-controls__item">
-                        <label for="depth">Spinner Depth</label>
-                        <input type="range" min="1" max="10" step="1" v-model="spinnerDepth" id="depth">
+                        <label for="depth">Depth</label>
+                        <input class="sl-controls__item-ctrl" type="range" min="1" max="10" step="1" v-model="spinnerDepth" id="depth">
                     </div>
 
                     <div class="sl-controls__item">
-                        <label for="color">Spinner Color</label>
-                        <input type="text"  v-model="spinnerColor" id="color">
+                        <label for="color">Color</label>
+                        <input class="sl-controls__item-ctrl" type="text"  v-model="spinnerColor" id="color">
                     </div>
 
                     <div class="sl-controls__item">
-                        <label for="clockwise">Spinner Clockwise rotation</label>
-                        <input type="checkbox" v-model="spinnerClockwise" id="clockwise">
+                        <label for="clockwise">Clockwise rotation</label>
+                        <input class="sl-controls__item-ctrl" type="checkbox" v-model="spinnerClockwise" id="clockwise">
                     </div>
 
                     <div class="sl-controls__item">
-                        <label for="duration">Spinner Duration</label>
-                        <input type="range" min="0.5" max="2" step="0.1" v-model="spinnerDuration" id="duration">
+                        <label for="duration">Duration</label>
+                        <input class="sl-controls__item-ctrl" type="range" min="0.5" max="2" step="0.1" v-model="spinnerDuration" id="duration">
                     </div>
 
                 </div>
@@ -62,12 +65,12 @@
 
         data() {
             return {
-                spinnerSize: 40,
+                spinnerSize: 50,
                 spinnerStatus: true,
                 spinnerColor: '#627794',
                 spinnerDepth: 3,
                 spinnerClockwise: true,
-                spinnerDuration: 1.1,
+                spinnerDuration: 0.8,
             }
         },
 
@@ -98,7 +101,7 @@
 
     body {
         margin: 0;
-        font: 400 1.4rem/1.4 'Helvetica Neue', Arial, sans-serif;
+        font: 400 1.4rem/1.4 'Roboto', 'Helvetica Neue', Arial, sans-serif;
         color: #3c4858;
         min-width: 102rem;
     }
@@ -129,9 +132,13 @@
         }
 
         &-title {
-            font-weight: 400;
+            font-weight: 300;
             text-align: center;
-            margin: 0 0 4rem 0;
+            margin: 0 0 2rem 0;
+        }
+
+        &-socials {
+            text-align: center;
         }
 
         &-preview {
@@ -142,7 +149,7 @@
         }
 
         &-controls {
-
+            margin-top: 2rem;
 
             &__item {
                 margin-bottom: 2rem;
@@ -150,9 +157,32 @@
                 align-items: center;
 
                 label {
+                    font-weight: 300;
+                    font-size: 2rem;
+                    width: 50%;
                     min-width: 10rem;
                     margin-right: 2rem;
+                    text-align: right;
+
+                    &:after {
+                        content: ':';
+                    }
                 }
+
+                button {
+                    border: 0;
+                    background: #eff2f7;
+                    padding: .6rem 1rem;
+                    border-radius: .4rem;
+                    outline: none;
+                    transition: background .25s;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: darken(#eff2f7, 5%);
+                    }
+                }
+
             }
         }
     }
