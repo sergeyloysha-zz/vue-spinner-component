@@ -1,8 +1,8 @@
 {
-  "name": "workflow",
-  "description": "A Vue.js project",
+  "name": "vue-spinner-component",
+  "description": "",
   "version": "1.0.0",
-  "author": "Sergey Loysha <sloysha@darwinapps.com>",
+  "author": "Sergey Loysha <sergeyloysha@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
