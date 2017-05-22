@@ -3,7 +3,7 @@
     <div class="sl">
         <div class="sl-container">
             <div class="sl-content">
-                <h1 class="sl-title">VueJS Spinner Component</h1>
+                <h1 class="sl-title">Vue Spinner Component</h1>
                 <div class="sl-socials">
                     <iframe src="http://ghbtns.com/github-btn.html?user=sergeyloysha&repo=vue-spinner-component&type=watch&count=true"
                             allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
@@ -56,7 +56,7 @@
 
 <script>
 
-    import Spinner from './components/Spinner.vue'
+    import Spinner from './Spinner.vue'
 
     export default {
         components: {
