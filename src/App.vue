@@ -6,8 +6,7 @@
                 <h1 class="sl-title">Vue Spinner Component</h1>
                 <h3 class="sl-subtitle">vue-spinner-component</h3>
                 <div class="sl-socials">
-                    <iframe src="http://ghbtns.com/github-btn.html?user=sergeyloysha&repo=vue-spinner-component&type=watch&count=true"
-                            allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+                    <a class="github-button" href="https://github.com/sergeyloysha/vue-spinner-component" data-icon="octicon-star" data-show-count="true" aria-label="Star sergeyloysha/vue-spinner-component on GitHub">Star</a>
                 </div>
 
                 <div class="sl-btns">
