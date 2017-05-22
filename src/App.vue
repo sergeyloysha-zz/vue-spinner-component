@@ -16,7 +16,7 @@
 
                 <div class="sl-preview">
                     <div class="sl-preview__spinner">
-                        <spinner :status="spinnerStatus" :color="spinnerColor" :size="spinnerSize" :depth="spinnerDepth" :clockwise="spinnerClockwise" :duration="spinnerDuration"></spinner>
+                        <spinner :status="spinnerStatus" :color="spinnerColor" :size="spinnerSize" :depth="spinnerDepth" :clockwise="spinnerClockwise" :speed="spinnerSpeed"></spinner>
                     </div>
                 </div>
                 
@@ -48,8 +48,8 @@
                     </div>
 
                     <div class="sl-controls__item">
-                        <label for="duration">Duration</label>
-                        <input class="sl-controls__item-ctrl" type="range" min="0.5" max="2" step="0.1" v-model="spinnerDuration" id="duration">
+                        <label for="speed">Speed</label>
+                        <input class="sl-controls__item-ctrl" type="range" min="0.5" max="2" step="0.1" v-model="spinnerSpeed" id="speed">
                     </div>
 
                 </div>
@@ -76,7 +76,7 @@
                 spinnerColor: '#627794',
                 spinnerDepth: 3,
                 spinnerClockwise: true,
-                spinnerDuration: 0.8,
+                spinnerSpeed: 0.8,
             }
         },
 

@@ -27,9 +27,9 @@
                 default: 3
             },
 
-            duration: {
+            speed: {
                 type: Number,
-                default: 1.1
+                default: 1.0
             },
 
             color: {
@@ -61,8 +61,8 @@
                 return this.depth + this.sizeUnits;
             },
 
-            spinnerDuration() {
-                return this.duration + this.timeUnits;
+            spinnerSpeed() {
+                return this.speed + this.timeUnits;
             },
 
             spinnerStyle() {
@@ -75,7 +75,7 @@
                     height: this.spinnerSize,
                     borderWidth: this.spinnerDepth,
                     animationName: this.spinnerClockwise,
-                    animationDuration: this.spinnerDuration
+                    animationDuration: this.spinnerSpeed
                 }
             }
         },
