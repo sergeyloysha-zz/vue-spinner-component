@@ -4,10 +4,17 @@
         <div class="sl-container">
             <div class="sl-content">
                 <h1 class="sl-title">Vue Spinner Component</h1>
+                <h3 class="sl-subtitle">vue-spinner-component</h3>
                 <div class="sl-socials">
                     <iframe src="http://ghbtns.com/github-btn.html?user=sergeyloysha&repo=vue-spinner-component&type=watch&count=true"
                             allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
                 </div>
+
+                <div class="sl-btns">
+                    <a href="https://github.com/sergeyloysha/vue-spinner-component" class="sl-btn" target="_blank">Source on Github</a>
+                    <a href="https://github.com/sergeyloysha/vue-spinner-component/archive/master.zip" class="sl-btn">Download</a>
+                </div>
+
                 <div class="sl-preview">
                     <div class="sl-preview__spinner">
                         <spinner :status="spinnerStatus" :color="spinnerColor" :size="spinnerSize" :depth="spinnerDepth" :clockwise="spinnerClockwise" :duration="spinnerDuration"></spinner>
@@ -112,10 +119,6 @@
 
     .app {
 
-        &__inner {
-            padding: 8.9rem 4rem 2rem 4rem;
-        }
-
     }
 
     .sl {
@@ -132,6 +135,12 @@
         }
 
         &-title {
+            font-weight: 300;
+            text-align: center;
+            margin: 0 0 1rem 0;
+        }
+
+        &-subtitle {
             font-weight: 300;
             text-align: center;
             margin: 0 0 2rem 0;
@@ -158,7 +167,7 @@
 
                 label {
                     font-weight: 300;
-                    font-size: 2rem;
+                    font-size: 1.8rem;
                     width: 50%;
                     min-width: 10rem;
                     margin-right: 2rem;
@@ -183,6 +192,32 @@
                     }
                 }
 
+            }
+        }
+
+        &-btns {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        &-btn {
+            display: inline-block;
+            min-width: 20rem;
+            font-weight: 400;
+            color: #fff;
+            background: #627794;
+            padding: 1rem 2rem;
+            border-radius: .4rem;
+            transition: background .25s;
+            text-align: center;
+            margin: 0 1rem;
+            text-decoration: none;
+
+            &:hover {
+                background: darken(#627794, 5%);
             }
         }
     }
