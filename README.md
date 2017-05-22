@@ -4,9 +4,14 @@ VueJS Spinner Component
 
 ## Installation
 
+### NPM
+```bash
+$ npm install vue-spinner-component
+```
+
 ### CommonJS
 ```js
-var PulseLoader = require('vue-spinner-component/src/Spinner.vue');
+var Spinner = require('vue-spinner-component/src/Spinner.vue');
 
 new Vue({
   components: {
