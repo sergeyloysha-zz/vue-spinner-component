@@ -169,7 +169,8 @@
                     font-size: 1.8rem;
                     width: 50%;
                     min-width: 10rem;
-                    margin-right: 2rem;
+                    margin-right: 1rem;
+                    padding-right: 1rem;
                     text-align: right;
 
                     &:after {
