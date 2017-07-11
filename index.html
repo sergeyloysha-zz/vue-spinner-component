@@ -9,5 +9,18 @@
     <div id="app"></div>
     <script src="dist/build.js"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+    <script>
+        (function(m,i,g,h,t,y,s){m['MightySendObject']=t;m[t]=m[t]||function(){
+            (m[t].q=m[t].q||[]).push(arguments)},m[t].l=1*new Date();y=i.createElement(g),
+            s=i.getElementsByTagName(g)[0];y.async=1;y.src=h;s.parentNode.insertBefore(y,s)
+        })(window,document,'script', 'http://api.mightysend.com/v1/ms-0.8.js','ms');
+
+        ms('init', "5964fdf3ecf909ae048b4567");
+        // this is an example only, replace user.email, user.first_name and user.last_name
+        // with real data
+        ms('identify', user.email, { 'first_name': user.first_name, 'last_name': user.last_name });
+    </script>
   </body>
 </html>
