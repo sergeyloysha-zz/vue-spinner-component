@@ -41,7 +41,7 @@
 
         data() {
             return {
-                clockwiseAnimations: ['rotateСlockwise', 'rotateCounterСlockwise'],
+                clockwiseAnimations: ['rotateClockwise', 'rotateCounterClockwise'],
                 sizeUnits: 'px',
                 timeUnits: 's'
             }
@@ -113,7 +113,7 @@
 
     }
 
-    @keyframes rotateСlockwise {
+    @keyframes rotateClockwise {
 
         0% {
             -webkit-transform: rotate(0deg);
@@ -127,7 +127,7 @@
 
     }
 
-    @keyframes rotateCounterСlockwise {
+    @keyframes rotateCounterClockwise {
 
         0% {
             -webkit-transform: rotate(0deg);
