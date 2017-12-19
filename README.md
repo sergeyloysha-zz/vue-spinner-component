@@ -1,6 +1,18 @@
-VueJS Spinner Component
+# Vue Spinner Component
 
-## [Live demo](http://sergeyloysha.github.io/vue-spinner-component/)
+[Demo](http://sergeyloysha.github.io/vue-spinner-component/)
+
+## Usage
+
+```html
+<spinner
+  :status="spinnerStatus"
+  :color="spinnerColor"
+  :size="spinnerSize"
+  :depth="spinnerDepth"
+  :rotation="spinnerRotation"
+  :speed="spinnerSpeed"></spinner>
+```
 
 ## Installation
 
@@ -40,12 +52,6 @@ Vue.component('spinner', require('vue-spinner-component/src/Spinner.vue'));
 ```
 npm install
 npm run dev
-```
-
-## Usage
-
-```html
-<spinner :status="spinnerStatus" :color="spinnerColor" :size="spinnerSize" :depth="spinnerDepth" :clockwise="spinnerClockwise" :speed="spinnerSpeed"></spinner>
 ```
 
 You can customize the color, size, depth, clockwise, speed with setting the props. All props have default value. You can control the spinner show/hidden with setting the status prop.
