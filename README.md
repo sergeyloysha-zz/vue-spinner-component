@@ -1,6 +1,6 @@
 # Vue Spinner Component
 
-## [DEMO](http://sergeyloysha.github.io/vue-spinner-component/)
+[Demo](http://sergeyloysha.github.io/vue-spinner-component/)
 
 ## Usage
 
