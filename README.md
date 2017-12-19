@@ -54,7 +54,7 @@ npm install
 npm run dev
 ```
 
-You can customize the color, size, depth, clockwise, speed with setting the props. All props have default value. You can control the spinner show/hidden with setting the status prop.
+You can customize the color, size, depth, rotation, speed with setting the props. All props have default value.
 
 ## License
 
