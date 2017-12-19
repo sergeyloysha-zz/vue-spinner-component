@@ -16,7 +16,7 @@
 
                 <div class="sl-preview">
                     <div class="sl-preview__spinner">
-                        <spinner :status="spinnerStatus" :color="spinnerColor" :size="spinnerSize" :depth="spinnerDepth" :clockwise="spinnerClockwise" :speed="spinnerSpeed"></spinner>
+                        <spinner :status="spinner.status" :color="spinner.color" :size="spinner.size" :depth="spinner.depth" :rotation="spinner.rotation" :speed="spinner.speed"></spinner>
                     </div>
                 </div>
                 
@@ -24,32 +24,32 @@
 
                     <div class="sl-controls__item">
                         <label for="size">Status</label>
-                        <button class="sl-controls__item-ctrl" v-model="spinnerStatus" @click="spinnerStatus = !spinnerStatus">{{ statusMessage }}</button>
+                        <button class="sl-controls__item-ctrl" v-model="spinner.status" @click="spinner.status = !spinner.status">{{ statusMessage }}</button>
                     </div>
 
                     <div class="sl-controls__item">
                         <label for="size">Size</label>
-                        <input class="sl-controls__item-ctrl" type="range" min="30" max="150" step="5" v-model="spinnerSize" id="size">
+                        <input class="sl-controls__item-ctrl" type="range" min="30" max="150" step="5" v-model="spinner.size" id="size">
                     </div>
 
                     <div class="sl-controls__item">
                         <label for="depth">Depth</label>
-                        <input class="sl-controls__item-ctrl" type="range" min="1" max="10" step="1" v-model="spinnerDepth" id="depth">
+                        <input class="sl-controls__item-ctrl" type="range" min="1" max="10" step="1" v-model="spinner.depth" id="depth">
                     </div>
 
                     <div class="sl-controls__item">
                         <label for="color">Color</label>
-                        <input class="sl-controls__item-ctrl" type="text"  v-model="spinnerColor" id="color">
+                        <input class="sl-controls__item-ctrl" type="text"  v-model="spinner.color" id="color">
                     </div>
 
                     <div class="sl-controls__item">
-                        <label for="clockwise">Clockwise rotation</label>
-                        <input class="sl-controls__item-ctrl" type="checkbox" v-model="spinnerClockwise" id="clockwise">
+                        <label for="clockwise">Rotation</label>
+                        <button class="sl-controls__item-ctrl" v-model="spinner.rotation" @click="spinner.rotation = !spinner.rotation">{{ rotationMessage }}</button>
                     </div>
 
                     <div class="sl-controls__item">
                         <label for="speed">Speed</label>
-                        <input class="sl-controls__item-ctrl" type="range" min="0.5" max="2" step="0.1" v-model="spinnerSpeed" id="speed">
+                        <input class="sl-controls__item-ctrl __rtl" type="range" min="0.5" max="2" step="0.1" v-model="spinner.speed" id="speed">
                     </div>
 
                 </div>
@@ -71,18 +71,24 @@
 
         data() {
             return {
-                spinnerSize: 50,
-                spinnerStatus: true,
-                spinnerColor: '#627794',
-                spinnerDepth: 3,
-                spinnerClockwise: true,
-                spinnerSpeed: 0.8,
+                spinner: {
+                    size: 50,
+                    status: true,
+                    color: '#627794',
+                    depth: 3,
+                    rotation: true,
+                    speed: 0.8,
+                }
             }
         },
 
         computed: {
             statusMessage() {
-                return this.spinnerStatus ? 'Active' : 'Inactive';
+                return this.spinner.status ? 'Active' : 'Inactive';
+            },
+
+            rotationMessage() {
+                return this.spinner.rotation ? 'Forward' : 'Backward';
             }
         }
     }
@@ -190,6 +196,10 @@
                     &:hover {
                         background: darken(#eff2f7, 5%);
                     }
+                }
+
+                input[type="range"].__rtl {
+                    direction: rtl
                 }
 
             }

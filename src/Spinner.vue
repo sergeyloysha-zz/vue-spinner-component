@@ -12,7 +12,7 @@
                 default: true
             },
 
-            clockwise: {
+            rotation: {
                 type: Boolean,
                 default: true
             },
@@ -41,7 +41,7 @@
 
         data() {
             return {
-                clockwiseAnimations: ['rotateClockwise', 'rotateCounterClockwise'],
+                rotationAnimations: ['forward', 'backward'],
                 sizeUnits: 'px',
                 timeUnits: 's'
             }
@@ -49,8 +49,8 @@
 
         computed: {
 
-            spinnerClockwise() {
-                return this.clockwise ? this.clockwiseAnimations[0] : this.clockwiseAnimations[1];
+            rotationDirection() {
+                return this.rotation ? this.rotationAnimations[0] : this.rotationAnimations[1];
             },
 
             spinnerSize() {
@@ -74,7 +74,7 @@
                     width: this.spinnerSize,
                     height: this.spinnerSize,
                     borderWidth: this.spinnerDepth,
-                    animationName: this.spinnerClockwise,
+                    animationName: this.rotationDirection,
                     animationDuration: this.spinnerSpeed
                 }
             }
@@ -113,7 +113,7 @@
 
     }
 
-    @keyframes rotateClockwise {
+    @keyframes forward {
 
         0% {
             -webkit-transform: rotate(0deg);
@@ -127,7 +127,7 @@
 
     }
 
-    @keyframes rotateCounterClockwise {
+    @keyframes backward {
 
         0% {
             -webkit-transform: rotate(0deg);
