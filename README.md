@@ -1,6 +1,6 @@
-VueJS Spinner Component
+# Vue Spinner Component
 
-## [Live demo](http://sergeyloysha.github.io/vue-spinner-component/)
+## [DEMO](http://sergeyloysha.github.io/vue-spinner-component/)
 
 ## Usage
 
