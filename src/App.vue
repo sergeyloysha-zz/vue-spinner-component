@@ -14,7 +14,7 @@
                     </div>
 
                     <div class="app__copy">
-                        &copy; 2018 Sergey Loysha / <a href="//loysha.com" target="_blank">loysha.com</a>
+                        &copy; 2018 Sergey Loysha / <a href="http://loysha.com" target="_blank">loysha.com</a>
                     </div>
                 </div>
                 <div class="app__preview app__side">
