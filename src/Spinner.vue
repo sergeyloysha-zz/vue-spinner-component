@@ -66,16 +66,20 @@
         return this.speed + this.timeUnits;
       },
 
-      spinnerOpacity() {
-        return this.opacity === -1 ? 0.15 : (this.opacity/100)*15;
+      spinnerPrimaryOpacity() {
+        return this.opacity === 1 ? 0.99 : this.opacity;
+      },
+
+      spinnerSecondaryOpacity() {
+        return this.opacity < 0 ? 0.15 : (this.opacity/100)*15;
       },
 
       spinnerStyle() {
         return {
-          borderTopColor: this.hexToRGB(this.color, this.spinnerOpacity),
-          borderRightColor: this.hexToRGB(this.color, this.spinnerOpacity),
-          borderBottomColor: this.hexToRGB(this.color, this.spinnerOpacity),
-          borderLeftColor: this.opacity === -1 ? this.color : this.hexToRGB(this.color, this.opacity),
+          borderTopColor: this.hexToRGB(this.color, this.spinnerSecondaryOpacity),
+          borderRightColor: this.hexToRGB(this.color, this.spinnerSecondaryOpacity),
+          borderBottomColor: this.hexToRGB(this.color, this.spinnerSecondaryOpacity),
+          borderLeftColor: this.opacity < 0 ? this.color : this.hexToRGB(this.color, this.spinnerPrimaryOpacity),
           width: this.spinnerSize,
           height: this.spinnerSize,
           borderWidth: this.spinnerDepth,
