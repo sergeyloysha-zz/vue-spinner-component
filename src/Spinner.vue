@@ -33,6 +33,11 @@
       color: {
         type: String,
         default: '#6589b6'
+      },
+
+      opacity: {
+        type: Number,
+        default: -1
       }
     },
 
@@ -61,12 +66,20 @@
         return this.speed + this.timeUnits;
       },
 
+      spinnerPrimaryOpacity() {
+        return this.opacity === 1 ? 0.99 : this.opacity;
+      },
+
+      spinnerSecondaryOpacity() {
+        return this.opacity < 0 ? 0.15 : (this.opacity/100)*15;
+      },
+
       spinnerStyle() {
         return {
-          borderTopColor: this.hexToRGB(this.color, 0.15),
-          borderRightColor: this.hexToRGB(this.color, 0.15),
-          borderBottomColor: this.hexToRGB(this.color, 0.15),
-          borderLeftColor: this.color,
+          borderTopColor: this.hexToRGB(this.color, this.spinnerSecondaryOpacity),
+          borderRightColor: this.hexToRGB(this.color, this.spinnerSecondaryOpacity),
+          borderBottomColor: this.hexToRGB(this.color, this.spinnerSecondaryOpacity),
+          borderLeftColor: this.opacity < 0 ? this.color : this.hexToRGB(this.color, this.spinnerPrimaryOpacity),
           width: this.spinnerSize,
           height: this.spinnerSize,
           borderWidth: this.spinnerDepth,

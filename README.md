@@ -11,7 +11,8 @@
   :size="spinnerSize"
   :depth="spinnerDepth"
   :rotation="spinnerRotation"
-  :speed="spinnerSpeed"></spinner>
+  :speed="spinnerSpeed"
+  :opacity="spinnerOpacity"></spinner>
 ```
 
 ## Installation
@@ -54,7 +55,7 @@ npm install
 npm run dev
 ```
 
-You can customize the color, size, depth, rotation, speed with setting the props. All props have default value.
+You can customize the color, size, depth, rotation, speed, opacity with setting the props. All props have default value.
 
 ## License
 

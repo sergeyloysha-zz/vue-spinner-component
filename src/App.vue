@@ -19,7 +19,7 @@
                 </div>
                 <div class="app__preview app__side">
                     <div class="app__spinner">
-                        <spinner :status="spinner.status" :color="spinner.color" :size="spinner.size" :depth="spinner.depth" :rotation="spinner.rotation" :speed="spinner.speed"></spinner>
+                        <spinner :status="spinner.status" :color="spinner.color" :size="spinner.size" :depth="spinner.depth" :rotation="spinner.rotation" :speed="spinner.speed" :opacity="spinner.opacity"></spinner>
                     </div>
                     <div class="app__controls">
                         <div class="sl-controls__item">
@@ -51,6 +51,11 @@
                             <label for="speed">Speed</label>
                             <input class="sl-controls__item-ctrl __rtl" type="range" min="0.5" max="2" step="0.01" v-model="spinner.speed" id="speed">
                         </div>
+
+                        <div class="sl-controls__item">
+                            <label for="opacity">Opacity</label>
+                            <input class="sl-controls__item-ctrl" type="range" min="0.1" max="1" step="0.01" v-model="spinner.opacity" id="opacity">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -77,6 +82,7 @@
                     depth: 3,
                     rotation: true,
                     speed: 0.8,
+                    opacity: 1
                 }
             }
         },
